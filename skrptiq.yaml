@@ -1,0 +1,59 @@
+# --- Identity ---
+id: "04784189-11c0-4acf-8945-d3b7d28c4044"
+name: "csv-to-narrative-report"
+display_name: "CSV to Narrative Report"
+description: "Turns raw CSV into a narrative report by doing the aggregation deterministically — parse, filter, dedupe, count — then letting a model summarise only the computed result, spending zero tokens on the maths."
+version: "1.0.1"
+engine: ">=0.1.0"
+
+# --- Attribution ---
+author:
+  name: "skrptiq"
+  url: "https://hub.skrptiq.ai"
+
+licence: "MIT"
+repository: "https://github.com/skrpts/csv-to-narrative-report"
+
+# --- Discovery (Hub) ---
+category: "developer"
+tags:
+  - "data"
+  - "builtin"
+  - "reporting"
+
+# --- Dependencies ---
+dependencies:
+  - id: "fcab9536-a13e-49c9-b0c3-bb3097682e69"
+    name: "llm-service"
+    version: 1.0.2
+    checksum: "sha256:292d811ee78ed4f4f18c20299115bb4df01150c3230feca30177a76b7f272cc6"
+
+# --- Requirements ---
+requires:
+  services:
+    - "llm-service"
+
+# --- Contents ---
+contents:
+  skills: 1
+  prompts: 1
+  workflows: 1
+  services: 0
+  sources: 0
+  documents: 0
+  assets: 0
+  total: 3
+
+security:
+  status: "pass"
+  scanned_at: "2026-07-12T13:34:31.222Z"
+  scanner_version: "3.3.0"
+  syntactic: "pass"
+  structural: "pass"
+  detected:
+    services: ["llm-service"]
+    permissions: []
+    data_handling: []
+  undeclared: []
+  warnings: []
+  report_url: "https://hub.skrptiq.ai/skrpts/csv-to-narrative-report/security"
